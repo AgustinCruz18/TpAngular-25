@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+/* MODO OSCURO - Gris Carbón y Verde Menta */
+body.modo-oscuro {
+    background-color: #36454f; /* Gris carbón */
+    color: #8fffd4; /* Verde menta claro */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.modo-oscuro .navbar {
+    background-color: #4a5763 !important; /* Tono más claro del gris para la barra */
+    box-shadow: 0 2px 4px rgba(143, 255, 212, 0.1); /* Sutil brillo verde */
+}
+
+body.modo-oscuro .nav-link {
+    color: #8fffd4 !important;
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro .nav-link:hover {
+    background-color: #5e6e7a;
+    color: #ffffff !important;
+}
+
+body.modo-oscuro .btn-outline-dark {
+    color: #8fffd4;
+    border-color: #8fffd4;
+}
+
+body.modo-oscuro .btn-outline-dark:hover {
+    background-color: #8fffd4;
+    color: #4a5763; /* Texto gris al pasar el ratón */
+}
+
+/* Opcional: estilos por defecto para modo claro (sin cambios) */
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

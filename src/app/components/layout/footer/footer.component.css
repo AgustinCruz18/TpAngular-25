@@ -1,0 +1,104 @@
+/* Estilos para el footer en modo oscuro (combinación Gris Carbón y Verde Menta) */
+.footer {
+    background-color: #4a5763; /* Un tono del gris carbón del header */
+    color: #8fffd4; /* Verde menta */
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.social-section {
+    text-align: center;
+}
+
+.social-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #a7d1eb; /* Un tono más claro del verde para el título */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    color: #8fffd4;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #a7d1eb; /* Un tono más claro al pasar el ratón */
+}
+
+.contact-form {
+    padding: 0 1rem;
+}
+
+.contact-form h4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #a7d1eb;
+}
+
+.map-section {
+    padding: 0 1rem;
+}
+
+.map-section h4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #a7d1eb;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(143, 255, 212, 0.2); /* Sutil sombra verde */
+}
+
+.form-control {
+    background-color: rgba(143, 255, 212, 0.1); /* Fondo verde sutil */
+    border: 1px solid rgba(143, 255, 212, 0.2); /* Borde verde claro */
+    color: #f1f1f1; /* Texto blanco o casi blanco */
+}
+
+.form-control::placeholder {
+    color: rgba(228, 255, 245, 0.7); /* Placeholder verde claro */
+}
+
+.form-control:focus {
+    background-color: rgba(143, 255, 212, 0.15);
+    border-color: #a7d1eb; /* Borde más intenso al enfocar */
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #8fffd4; /* Botón verde menta */
+    border: none;
+    width: 100%;
+    padding: 0.75rem; /* Un poco más de padding para destacar */
+    color: #36454f; /* Texto gris carbón */
+    font-weight: bold; /* Texto en negrita para resaltar */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #a7d1eb; /* Tono más claro al pasar el ratón */
+    color: #36454f;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0;
+    }
+
+    .social-section,
+    .contact-form,
+    .map-section {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,72 @@
+<div class="container text-center my-5">
+
+    <!-- Inicio del juego -->
+    <div *ngIf="!juegoIniciado">
+      <h2 class="mb-4">Bienvenido al Juego del Ahorcado</h2>
+      <p class="mb-3">Haz clic en el botón para comenzar.</p>
+      <button class="btn btn-success btn-lg" (click)="iniciarJuego()">Iniciar Juego</button>
+    </div>
+  
+    <!-- Juego en marcha -->
+    <div *ngIf="juegoIniciado">
+      <h2 class="mb-3">Juego del Ahorcado - Categoría: {{ categoria }}</h2>
+  
+      <img [src]="imagenActual" alt="Estado del juego" class="img-fluid mb-3 ahorcado-img">
+
+  
+      <h3 class="mb-4 display-6">
+        {{ obtenerPalabraMostrada() }}
+      </h3>
+  
+      <div class="mb-3">
+        <strong>Intentos restantes: </strong> {{ intentosRestantes }}
+      </div>
+  
+      <div class="d-flex flex-wrap justify-content-center">
+        <button
+          *ngFor="let letra of letrasDisponibles"
+          class="btn btn-outline-dark m-1"
+          [ngClass]="{
+            'correcta': palabraOculta.includes(letra) && letrasAdivinadas.includes(letra),
+            'incorrecta': !palabraOculta.includes(letra) && letrasAdivinadas.includes(letra)
+          }"
+          [disabled]="letrasAdivinadas.includes(letra) || juegoTerminado"
+          (click)="letraSeleccionada(letra)">
+          {{ letra }}
+        </button>
+      </div>
+  
+      <div class="mt-4">
+        <button class="btn btn-secondary btn-reiniciar" (click)="reiniciarJuego()">Reiniciar Juego</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal: Ganó -->
+  <div class="modal fade" id="ganoModal" tabindex="-1" aria-labelledby="ganoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ganoModalLabel">¡Ganaste!</h5>
+        </div>
+        <div class="modal-body">
+          <p class="text-success fs-5">Felicitaciones, adivinaste la palabra correctamente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal: Perdió -->
+  <div class="modal fade" id="perdioModal" tabindex="-1" aria-labelledby="perdioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title" id="perdioModalLabel">¡Perdiste!</h5>
+        </div>
+        <div class="modal-body">
+          <p class="text-danger fs-5">La palabra era: <strong>{{ palabraOculta }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

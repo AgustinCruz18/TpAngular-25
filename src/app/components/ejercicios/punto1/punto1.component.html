@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h1 class="text-center">Noticias del día</h1>
+  <div class="card mx-auto" style="max-width: 600px;">
+    <img [src]="'assets/img/' + noticias[actual].img" class="card-img-top img-fluid" alt="Imagen de noticia" loading="lazy"> 
+
+    <div class="card-body">
+      <h5 class="card-title">{{ noticias[actual].titulo }}</h5> <!--interpolacion-->
+      <p class="card-text">{{ noticias[actual].noticia }}</p>
+      <div class="d-flex justify-content-center"> 
+        <button class="btn btn-primary me-2" (click)="anterior()">Anterior</button>
+        <button class="btn btn-primary" (click)="siguiente()">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</div>

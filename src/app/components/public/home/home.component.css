@@ -1,0 +1,19 @@
+.img-fixed {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(30, 57, 211, 0.493);
+    background-color: #c6c8ca;
+  }
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }  

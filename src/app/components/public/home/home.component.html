@@ -1,0 +1,16 @@
+<div class="container py-5">
+    <h1 class="text-center mb-5">Trabajo Práctico N°3</h1>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" *ngFor="let card of tarjetas">
+        <div class="card h-100 shadow-sm">
+          <img [src]="card.imagen" class="card-img-top img-fluid" alt="{{card.titulo}}" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{card.titulo}}</h5>
+            <p class="card-text">{{card.descripcion}}</p>
+            <a [routerLink]="card.ruta" class="btn btn-info mt-auto">Ir a {{card.titulo}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

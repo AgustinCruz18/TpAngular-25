@@ -1,0 +1,27 @@
+.container h3 {
+  margin-bottom: 1.5rem;
+}
+table {
+  width: 100%;
+}
+/* Estilos para Total con Descuento */
+.mt-3 label.form-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.mt-3 input.form-control[readonly] {
+  /* Estilos base para modo claro */
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  color: #495057;
+  cursor: not-allowed;
+}
+
+/* Estilos para modo oscuro */
+body.modo-oscuro .mt-3 input.form-control[readonly] {
+  background-color: #4a5763;
+  border: 1px solid #5e6e7a;
+  color: #a7d1eb;
+}
